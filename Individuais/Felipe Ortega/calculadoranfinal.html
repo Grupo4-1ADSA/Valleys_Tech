@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+
+    <style>
+        body {
+            background-color: rgb(117, 47, 47);
+             justify-content: right;
+         }
+</style>
+
+<img height="60", src="C:\Users\Felipe Ortega\Desktop\Pi\Captura de tela 2023-03-04 204008.png" alt="logo">
+
+   
+</head>
+<body>
+    
+    <h1> Calculadora financeira- Valley's tech </h1>
+     
+    Qual a quantidade de metros² da sua vinicula?<input id="input_metros">
+     <br>
+    Qual a KG de uvas por metros²?<input id="input_qtduvas">
+    <br>
+    Qual a quantidade de hectolitro por hectare por ano?<input id="input_qlograma">
+    <br>
+    Qual a quantidade de garrafas de vinhos por safra?<input id="input_garrafas">
+    <br>
+    Qual a quantidade de garrafas total por ano?<input id="input_vinho">
+    <br>
+    Qual a quantidade de ganho por ano ?<input id="input_ganho">
+    <br>
+    Qual a quantidade de perda por ano?<input id="input_perda">
+    <br>
+    <br>
+    <button onclick="calcular()"> calcular total </button>
+    <br>
+    <br>
+   <div id="business"></div> <br>
+   <br>
+
+   <br>
+    
+
+</body>
+</html>
+
+
+<script>
+    function calcular(){
+        var metros= Number(input_metros.value);
+        var uvasq= Number(input_qtduvas.value);
+        var gramas= Number(input_qlograma.value);
+        var agarrafa= Number(input_garrafas.value);
+        var vinho= Number(input_vinho.value);
+        var ganho=Number(input_ganho.value);
+        var perda=Number(input_perda.value);
+        var final= ganho - perda
+        var sucesso= (final * 0.20) + final
+        var total= uvasq * metros
+        var bgarrafatotal= total - gramas 
+        var wine= agarrafa - vinho
+        
+       
+    business.innerHTML=` A quantidade de uvas por metro² é de <b>${total}</b>, você perdeu <b>${perda}</b> por metro² e ganhou <b>${final}</b> por metro².<br>
+     Com a nossa tecnologia você poderá ganhar 20% a mais por ano, lucrando o total de R$ <b>${sucesso}</b>!, e <b>${wine}</b> garrafas por ano.<br>
+     Sem a nossa tecnologia você ganhará <b>${final}</b>ao ano.`
+      
+    }
+    
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Financeira</title>
+    </head>
+    <body>
+        Entre com a quantidade de lucro da sua última safra: R$<input type="text" id="input_lucro">
+        <br>
+        Quantidade de perdas da última safra: R$<input type="text" id="input_perda">
+        <br>
+        <button onclick="calcular_beneficio()">Calcular benefício</button>
+        <div id="div_beneficio">
+
+        </div>
+    </body>
+</html>
+<script>
+    function calcular_beneficio(){
+        var lucro_geral = Number(input_lucro.value);
+        var perda = Number(input_perda.value);
+        var perda_reduzida = perda * (60/100);
+        var lucro_ganho = lucro_geral + perda_reduzida;
+
+        div_beneficio.innerHTML = "De acordo com os dados apresentados seu lucro foi de R$"+lucro_geral+",nós da Valleys Tech garantimos uma recuperação de 60% do total de perdas que é R$"+perda+ ", logo com o nosso sistema seu lucro se tornará de  R$"+lucro_ganho;
+    }
+</script>
